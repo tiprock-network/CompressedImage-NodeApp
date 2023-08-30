@@ -3,7 +3,7 @@ const request=require('request')
 const app=express()
 
 app.get('/',(req,res)=>{
-    request.get('http://localhost:5004/get_image',(error,response,body)=>{
+    request.get('https://image-compress.azurewebsites.net/get_image',(error,response,body)=>{
 
         if(!error && response.statusCode===200) {
             const data = JSON.parse(body);
